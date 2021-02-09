@@ -1,0 +1,3 @@
+[submodule "Client/client-train"]
+	path = Client/client-train
+	url = https://github.com/Claire023/api-rest-train-reservation
