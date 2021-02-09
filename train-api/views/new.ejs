@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Faire une reservation</title>
+</head>
+<body>
+
+      <style>
+
+a{
+  text-decoration: none;
+  color:white;
+}
+
+</style>
+
+
+    <div class="container">
+        <h3 class="text-center">Faire une réservation</h3>
+    
+      
+        <form action="/booktrains" method="post">
+
+            <label for="exampleFormControlSelect1">Numéro Train</label>
+            <select class="form-control" id="exampleFormControlSelect1" name="currentTrain">
+                <% for (let c of trains) {%>
+    
+              <option><%=c.numTrain%></option>
+ 
+              <%}%>
+            </select>
+          
+         
+
+            
+
+            <input type="text" placeholder="Nombre de places" name="numberPlaces"> <br>
+            <button type="submit" class="btn btn-danger">Valider la réservation</button>
+        </form>
+
+    </div>
+
+    
+</body>
+</html>
